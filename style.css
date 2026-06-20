@@ -730,3 +730,79 @@ textarea.form-control {
     background-color: rgba(255, 255, 255, 0.08);
   }
 }
+/* ==============================
+   Ajustes finales
+   ============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-margin-top: 24px;
+}
+
+.section:target {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.08), var(--shadow-sm);
+}
+
+.site-footer {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg) 0;
+  background-color: var(--color-primary-dark);
+  color: #dbeafe;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Utilidades reutilizables del Design System */
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+/* Mejora responsive general */
+
+@media (max-width: 480px) {
+  .site-header h1 {
+    font-size: 1.55rem;
+  }
+
+  .section {
+    padding: var(--space-md);
+  }
+
+  .component-preview {
+    padding: var(--space-md);
+  }
+
+  .button-group .btn,
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+}

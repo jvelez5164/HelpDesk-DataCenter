@@ -110,12 +110,96 @@
       </p>
     </section>
 
-    <section class="section">
-      <h2>Formularios</h2>
-      <p>
-        Elementos de entrada para registrar, actualizar o consultar incidentes.
-      </p>
-    </section>
+<section class="section">
+  <h2>Formularios</h2>
+  <p>
+    Elementos de entrada para registrar, actualizar o consultar incidentes dentro del sistema.
+  </p>
+
+  <div class="component-preview">
+    <form class="form-card">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="incident-title">Título del incidente</label>
+          <input
+            class="form-control"
+            type="text"
+            id="incident-title"
+            name="incident-title"
+            placeholder="Ej. Error de acceso al sistema"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="incident-category">Categoría</label>
+          <select class="form-control" id="incident-category" name="incident-category">
+            <option value="">Seleccione una categoría</option>
+            <option value="software">Software</option>
+            <option value="hardware">Hardware</option>
+            <option value="redes">Redes</option>
+            <option value="seguridad">Seguridad</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="incident-priority">Prioridad</label>
+          <select class="form-control" id="incident-priority" name="incident-priority">
+            <option value="">Seleccione una prioridad</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+            <option value="critica">Crítica</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="incident-date">Fecha de reporte</label>
+          <input
+            class="form-control"
+            type="date"
+            id="incident-date"
+            name="incident-date"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="incident-description">Descripción del incidente</label>
+        <textarea
+          class="form-control"
+          id="incident-description"
+          name="incident-description"
+          rows="4"
+          placeholder="Describa brevemente el problema reportado..."
+        ></textarea>
+        <small class="help-text">Incluya detalles relevantes para facilitar la atención del incidente.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="incident-error">Campo con error</label>
+        <input
+          class="form-control is-invalid"
+          type="text"
+          id="incident-error"
+          name="incident-error"
+          value="Dato incompleto"
+          aria-invalid="true"
+        >
+        <small class="error-message">Este campo requiere información válida.</small>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" id="notify-user" name="notify-user">
+        <label for="notify-user">Notificar al usuario cuando el incidente sea actualizado</label>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Guardar incidente</button>
+        <button class="btn btn-outline" type="reset">Limpiar formulario</button>
+      </div>
+    </form>
+  </div>
+</section>
 
     <section class="section">
       <h2>Tarjetas</h2>

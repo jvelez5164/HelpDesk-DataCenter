@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<section class="section">
+<section class="section" id="colores">
   <h2>Paleta de colores</h2>
   <p>
     Variables corporativas definidas en CSS para mantener una línea gráfica consistente en el sistema.
@@ -65,7 +65,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="botones">
   <h2>Botones</h2>
   <p>
     Componentes reutilizables para acciones principales, secundarias y estados del sistema.
@@ -130,7 +130,7 @@
       </p>
     </section>
 
-<section class="section">
+<section class="section" id="formularios">
   <h2>Formularios</h2>
   <p>
     Elementos de entrada para registrar, actualizar o consultar incidentes dentro del sistema.
@@ -221,7 +221,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="tarjetas">
   <h2>Tarjetas</h2>
   <p>
     Cards informativas reutilizables para mostrar datos resumidos, estados y acciones de incidentes.
@@ -296,7 +296,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="alertas">
   <h2>Alertas</h2>
   <p>
     Mensajes visuales reutilizables para comunicar información, confirmaciones, advertencias y errores del sistema.
@@ -324,7 +324,84 @@
     </div>
   </div>
 </section>
+<section class="section" id="ejemplo">
+  <h2>Ejemplo aplicado</h2>
+  <p>
+    Vista de referencia que integra los componentes del UI Kit en un escenario real de gestión de incidentes.
+  </p>
 
+  <div class="dashboard-demo">
+    <div class="summary-grid">
+      <article class="summary-card">
+        <span class="summary-label">Incidentes abiertos</span>
+        <strong>18</strong>
+        <small>Requieren atención</small>
+      </article>
+
+      <article class="summary-card">
+        <span class="summary-label">En revisión</span>
+        <strong>7</strong>
+        <small>Asignados a soporte</small>
+      </article>
+
+      <article class="summary-card">
+        <span class="summary-label">Resueltos</span>
+        <strong>42</strong>
+        <small>Durante el mes</small>
+      </article>
+
+      <article class="summary-card">
+        <span class="summary-label">Críticos</span>
+        <strong>3</strong>
+        <small>Prioridad alta</small>
+      </article>
+    </div>
+
+    <div class="demo-layout">
+      <article class="card incident-card">
+        <div class="card-header">
+          <span class="badge badge-danger">Crítico</span>
+          <span class="card-date">Nuevo</span>
+        </div>
+
+        <h3>Falla general de autenticación</h3>
+        <p>
+          El sistema no permite validar credenciales de usuarios administrativos.
+        </p>
+
+        <div class="card-meta">
+          <span>Responsable: Mesa de ayuda</span>
+          <span>Tiempo estimado: 2 horas</span>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn btn-primary">Asignar técnico</button>
+          <button class="btn btn-outline">Escalar</button>
+        </div>
+      </article>
+
+      <div class="demo-panel">
+        <h3>Registro rápido</h3>
+
+        <div class="form-group">
+          <label for="quick-status">Estado del incidente</label>
+          <select class="form-control" id="quick-status">
+            <option>Abierto</option>
+            <option>En revisión</option>
+            <option>Resuelto</option>
+          </select>
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+          <strong>Advertencia:</strong>
+          El incidente crítico debe ser atendido antes de superar el tiempo máximo de respuesta.
+        </div>
+
+        <button class="btn btn-success" type="button">Actualizar estado</button>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
 
 </body>

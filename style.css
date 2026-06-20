@@ -506,3 +506,58 @@ textarea.form-control {
     width: 100%;
   }
 }
+/* ==============================
+   Alertas
+   ============================== */
+
+.alert-list {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.alert {
+  position: relative;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid transparent;
+  border-left-width: 6px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.alert strong {
+  font-weight: 800;
+}
+
+.alert-info {
+  background-color: #e0f2fe;
+  border-color: #7dd3fc;
+  border-left-color: var(--color-info);
+  color: #075985;
+}
+
+.alert-success {
+  background-color: #dcfce7;
+  border-color: #86efac;
+  border-left-color: var(--color-success);
+  color: #166534;
+}
+
+.alert-warning {
+  background-color: #fef3c7;
+  border-color: #fcd34d;
+  border-left-color: var(--color-warning);
+  color: #92400e;
+}
+
+.alert-danger {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+  border-left-color: var(--color-danger);
+  color: #991b1b;
+}
+
+.alert[role="alert"] {
+  box-shadow: var(--shadow-sm);
+}

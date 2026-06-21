@@ -1,84 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets Registrados</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets Registrados - Centro de Soporte Tecnológico</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Centro de Soporte Tecnológico</h1>
-        <p>Listado de Tickets Registrados</p>
-    </header>
+  <header>
+    <h1>Centro de Soporte Tecnológico</h1>
+    <p>Consulta y seguimiento de incidentes informáticos registrados</p>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="reportar.html">Reportar Incidente</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-        </ul>
-    </nav>
+  <nav aria-label="Navegación principal del sistema">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reportar.html">Reportar Incidente</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+    </ul>
+  </nav>
 
-    <main>
+  <main>
+    <section>
+      <h2>Listado General de Tickets</h2>
+      <article>
+        <h3>Seguimiento de incidentes</h3>
+        <p>
+          En esta sección se visualizan los tickets registrados en el sistema Help Desk.
+          La tabla permite revisar el identificador del incidente, la categoría, prioridad,
+          estado actual y responsable de atención.
+        </p>
+      </article>
+    </section>
 
-        <section>
+    <section>
+      <h2>Resumen de Estados</h2>
+      <ul>
+        <li>Pendientes: 1</li>
+        <li>En proceso: 1</li>
+        <li>Resueltos: 1</li>
+      </ul>
+    </section>
 
-            <h2>Listado General</h2>
+    <section>
+      <h2>Tickets Registrados</h2>
 
-            <article>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Incidente</th>
+            <th>Categoría</th>
+            <th>Prioridad</th>
+            <th>Estado</th>
+            <th>Responsable</th>
+          </tr>
+        </thead>
 
-                <h3>Tickets Registrados</h3>
+        <tbody>
+          <tr>
+            <td data-label="ID">101</td>
+            <td data-label="Incidente">Falla de conexión WiFi</td>
+            <td data-label="Categoría">Red</td>
+            <td data-label="Prioridad">Alta</td>
+            <td data-label="Estado">Pendiente</td>
+            <td data-label="Responsable">Soporte de redes</td>
+          </tr>
 
-                <table>
+          <tr>
+            <td data-label="ID">102</td>
+            <td data-label="Incidente">Computador no enciende</td>
+            <td data-label="Categoría">Hardware</td>
+            <td data-label="Prioridad">Media</td>
+            <td data-label="Estado">En proceso</td>
+            <td data-label="Responsable">Soporte técnico</td>
+          </tr>
 
-                    <tr>
-                        <th>ID</th>
-                        <th>Incidente</th>
-                        <th>Categoría</th>
-                        <th>Prioridad</th>
-                        <th>Estado</th>
-                    </tr>
+          <tr>
+            <td data-label="ID">103</td>
+            <td data-label="Incidente">Error de acceso al sistema</td>
+            <td data-label="Categoría">Software</td>
+            <td data-label="Prioridad">Baja</td>
+            <td data-label="Estado">Resuelto</td>
+            <td data-label="Responsable">Mesa de ayuda</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-                    <tr>
-                        <td>101</td>
-                        <td>Falla de conexión WiFi</td>
-                        <td>Red</td>
-                        <td>Alta</td>
-                        <td>Pendiente</td>
-                    </tr>
+    <section>
+      <h2>Acciones del Sistema</h2>
 
-                    <tr>
-                        <td>102</td>
-                        <td>Computador no enciende</td>
-                        <td>Hardware</td>
-                        <td>Media</td>
-                        <td>En proceso</td>
-                    </tr>
+      <article>
+        <h3>Registrar nuevo incidente</h3>
+        <p>
+          Si se detecta una nueva falla tecnológica, se puede registrar un ticket desde
+          el formulario de reporte.
+        </p>
+        <a href="reportar.html">
+          <button type="button">Nuevo ticket</button>
+        </a>
+      </article>
 
-                    <tr>
-                        <td>103</td>
-                        <td>Error de acceso al sistema</td>
-                        <td>Software</td>
-                        <td>Baja</td>
-                        <td>Resuelto</td>
-                    </tr>
+      <article>
+        <h3>Volver al dashboard</h3>
+        <p>
+          Regrese al panel principal para consultar el resumen general del sistema Help Desk.
+        </p>
+        <a href="index.html">
+          <button type="button">Ir al inicio</button>
+        </a>
+      </article>
+    </section>
+  </main>
 
-                </table>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
-    </footer>
+  <footer>
+    <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
+  </footer>
 
 </body>
-
 </html>

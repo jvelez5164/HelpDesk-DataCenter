@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro de Soporte Tecnológico</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Centro de Soporte Tecnológico</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Centro de Soporte Tecnológico</h1>
-        <p>Sistema de Gestión de Incidentes Informáticos</p>
-    </header>
+  <header>
+    <h1>Centro de Soporte Tecnológico</h1>
+    <p>Sistema de Gestión de Incidentes Informáticos</p>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="reportar.html">Reportar Incidente</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-        </ul>
-    </nav>
+  <nav aria-label="Navegación principal del sistema">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reportar.html">Reportar Incidente</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+    </ul>
+  </nav>
 
-    <main>
+  <main>
+    <section>
+      <h2>Dashboard General</h2>
+      <article>
+        <h3>Bienvenido al sistema Help Desk</h3>
+        <p>
+          Este sistema permite registrar, consultar y administrar incidentes tecnológicos
+          reportados por los usuarios. El panel principal resume el estado general de los
+          tickets y facilita el acceso rápido a las funciones esenciales del sistema.
+        </p>
+      </article>
+    </section>
 
-        <section>
-            <h2>Información General</h2>
+    <section>
+      <h2>Resumen del Sistema</h2>
+      <ul>
+        <li>Incidentes registrados: 20</li>
+        <li>Tickets resueltos: 14</li>
+        <li>Tickets pendientes: 6</li>
+      </ul>
+    </section>
 
-            <article>
-                <h3>Bienvenido</h3>
-                <p>
-                    Este sistema permite registrar, consultar y administrar
-                    incidentes tecnológicos reportados por los usuarios.
-                </p>
-            </article>
-        </section>
+    <section>
+      <h2>Indicadores de Atención</h2>
 
-        <section>
-            <h2>Estadísticas</h2>
+      <article>
+        <h3>Incidentes abiertos</h3>
+        <p>
+          Actualmente existen tickets pendientes de revisión por parte del equipo de soporte.
+        </p>
+        <button type="button">Revisar tickets</button>
+      </article>
 
-            <article>
-                <h3>Resumen del Sistema</h3>
+      <article>
+        <h3>Tickets resueltos</h3>
+        <p>
+          Los incidentes solucionados permiten medir el rendimiento operativo del área técnica.
+        </p>
+        <button type="button">Ver historial</button>
+      </article>
 
-                <ul>
-                    <li>Incidentes registrados: 20</li>
-                    <li>Tickets resueltos: 14</li>
-                    <li>Tickets pendientes: 6</li>
-                </ul>
-            </article>
-        </section>
+      <article>
+        <h3>Atención prioritaria</h3>
+        <p>
+          Los incidentes de prioridad alta deben ser atendidos con mayor rapidez para evitar
+          afectaciones en los servicios institucionales.
+        </p>
+        <button type="button">Consultar prioridad</button>
+      </article>
+    </section>
 
-    </main>
+    <section>
+      <h2>Accesos Rápidos</h2>
 
-    <footer>
-        <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
-    </footer>
+      <article>
+        <h3>Registrar nuevo incidente</h3>
+        <p>
+          Acceda al formulario para reportar fallas de red, hardware, software u otros
+          problemas tecnológicos.
+        </p>
+        <a href="reportar.html">
+          <button type="button">Reportar incidente</button>
+        </a>
+      </article>
+
+      <article>
+        <h3>Consultar tickets registrados</h3>
+        <p>
+          Revise el listado de tickets existentes, su prioridad, categoría y estado actual.
+        </p>
+        <a href="tickets.html">
+          <button type="button">Ver tickets</button>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
+  </footer>
 
 </body>
-
 </html>

@@ -329,3 +329,44 @@ footer p {
     border-bottom: none;
   }
 }
+/* Refuerzo responsive para tablas en vista móvil */
+@media (max-width: 640px) {
+  table {
+    box-shadow: none;
+  }
+
+  tbody {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  tr {
+    box-shadow: var(--shadow-sm);
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    text-align: right;
+    font-size: 0.92rem;
+    background-color: #ffffff;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: left;
+  }
+
+  td[data-label="Prioridad"] {
+    font-weight: 700;
+  }
+
+  td[data-label="Estado"] {
+    font-weight: 700;
+    color: var(--color-info);
+  }
+}

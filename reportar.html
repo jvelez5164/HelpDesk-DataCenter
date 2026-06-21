@@ -1,101 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportar Incidente</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar Incidente - Centro de Soporte Tecnológico</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Centro de Soporte Tecnológico</h1>
-        <p>Formulario de Registro de Incidentes</p>
-    </header>
+  <header>
+    <h1>Centro de Soporte Tecnológico</h1>
+    <p>Registro de incidentes informáticos del sistema Help Desk</p>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="reportar.html">Reportar Incidente</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-        </ul>
-    </nav>
+  <nav aria-label="Navegación principal del sistema">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reportar.html">Reportar Incidente</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+    </ul>
+  </nav>
 
-    <main>
+  <main>
+    <section>
+      <h2>Formulario de Registro de Incidentes</h2>
+      <article>
+        <h3>Datos del incidente</h3>
+        <p>
+          Complete la información solicitada para registrar un nuevo incidente tecnológico.
+          Los datos ingresados permitirán clasificar la solicitud y asignar la prioridad
+          correspondiente al equipo de soporte.
+        </p>
+      </article>
+    </section>
 
-        <section>
+    <section>
+      <h2>Registrar nuevo ticket</h2>
 
-            <h2>Formulario de Incidentes</h2>
+      <form action="logica_tickets.php" method="POST">
+        <div>
+          <label for="titulo">Título del incidente:</label>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="Ejemplo: Falla de conexión a internet"
+            required>
+        </div>
 
-            <article>
+        <div>
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="Red">Red</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Soporte general">Soporte general</option>
+          </select>
+        </div>
 
-                <h3>Registro de Incidente</h3>
+        <div>
+          <p>Prioridad:</p>
 
-                <form>
+          <label>
+            <input type="radio" name="prioridad" value="Alta" required>
+            Alta
+          </label>
 
-                    <label for="titulo">Título del incidente:</label>
-                    <br><br>
+          <label>
+            <input type="radio" name="prioridad" value="Media">
+            Media
+          </label>
 
-                    <input type="text" id="titulo" name="titulo">
+          <label>
+            <input type="radio" name="prioridad" value="Baja">
+            Baja
+          </label>
+        </div>
 
-                    <br><br>
+        <div>
+          <label for="descripcion">Descripción del incidente:</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            placeholder="Describa el problema presentado, equipo afectado, ubicación y cualquier detalle relevante."
+            required></textarea>
+        </div>
 
-                    <label for="categoria">Categoría:</label>
-                    <br><br>
+        <button type="submit">Enviar Reporte</button>
+      </form>
+    </section>
 
-                    <select id="categoria" name="categoria">
-                        <option>Red</option>
-                        <option>Hardware</option>
-                        <option>Software</option>
-                    </select>
+    <section>
+      <h2>Recomendaciones para el reporte</h2>
+      <ul>
+        <li>Describir el problema con claridad.</li>
+        <li>Seleccionar la categoría correcta.</li>
+        <li>Asignar prioridad según el nivel de urgencia.</li>
+      </ul>
+    </section>
+  </main>
 
-                    <br><br>
-
-                    <p>Prioridad:</p>
-
-                    <input type="radio" id="alta" name="prioridad">
-                    <label for="alta">Alta</label>
-
-                    <br>
-
-                    <input type="radio" id="media" name="prioridad">
-                    <label for="media">Media</label>
-
-                    <br>
-
-                    <input type="radio" id="baja" name="prioridad">
-                    <label for="baja">Baja</label>
-
-                    <br><br>
-
-                    <label for="descripcion">
-                        Descripción del incidente:
-                    </label>
-
-                    <br><br>
-
-                    <textarea id="descripcion" rows="6" cols="40"></textarea>
-
-                    <br><br>
-
-                    <button type="submit">
-                        Enviar Reporte
-                    </button>
-
-                </form>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
-    </footer>
+  <footer>
+    <p>Universidad Técnica de Manabí - Desarrollo de Sistemas Informáticos</p>
+  </footer>
 
 </body>
-
 </html>
